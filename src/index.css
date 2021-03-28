@@ -1,0 +1,235 @@
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+.mailContainer {
+  margin-top: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.datePickerStyle {
+  margin-top: 20px;
+  display: flex;
+}
+
+.datePickerStyle .dates input {
+  width: 5px;
+  height: 38px;
+  background-image: url(/src/assets/icon_calender.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center left;
+  background-position-x: 15px;
+  padding-left: 50px;
+  border: 1px solid rgba(159, 159, 159, 0.605);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: none;
+}
+
+.textInput {
+  border: 1px solid rgba(159, 159, 159, 0.605);
+  border-left: none;
+  padding-left: 10px;
+}
+
+.searchBtn {
+  background-image: url(/src/assets/icon_search.svg);
+  background-size: 19px;
+  background-position: center center;
+  background-color: rgba(232, 232, 232, 0.714);
+  border: 1px solid rgba(159, 159, 159, 0.605);
+  border-left: none;
+  background-repeat: no-repeat;
+  width: 50px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+hr {
+  border: 1px solid rgba(204, 204, 204, 0.605);
+}
+
+.mailResults {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #666666;
+  font-family: sans-serif;
+}
+
+.mailResults span {
+  font-size: 24px;
+}
+
+.mailBody {
+  width: 100%;
+  min-height: 600px;
+  max-height: auto;
+  background-repeat: no-repeat;
+  background-size: 120px;
+  background-position: center center;
+}
+
+.tableHeader {
+  padding: 13px;
+  background-color: rgba(238, 238, 238, 0.728);
+  font-weight: 600;
+  color: #666666;
+  font-size: 14px;
+  border-top: 2px solid rgba(102, 102, 102, 0.315);
+  border-bottom: 2px solid rgba(102, 102, 102, 0.315);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2fr 1fr;
+}
+
+.lastRow {
+  display: flex;
+  color: black;
+}
+
+.filterBtn {
+  background-image: url(/src/assets/icon_arrow01.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center center;
+  width: 40px;
+  height: 16px;
+}
+
+.tableBody {
+  margin-top: 5px;
+}
+
+.eachMail {
+  cursor: pointer;
+  color: rgb(38, 38, 38);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2fr 1fr;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.eachMail:hover {
+  color: blue;
+}
+
+.eachMail div {
+  position: relative;
+}
+
+.haveAttach {
+  position: absolute !important;
+  right: 17px;
+  top: 0px;
+  background-image: url(/src/assets/icon_clip.svg);
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+
+.removeMail {
+  font-size: 12px;
+  position: absolute !important;
+  right: 10px;
+  top: 2px;
+}
+
+.removeMail:hover {
+  color: red;
+}
+
+@media screen and (max-width: 750px) {
+  .eachMail {
+    position: relative;
+    cursor: pointer;
+    color: rgb(38, 38, 38);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+  }
+
+  .eachMail div {
+    position: unset;
+    overflow: hidden;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .theDate {
+    position: absolute !important;
+    top: 3px;
+    right: 5px;
+    overflow: unset !important;
+  }
+  .haveAttach {
+    top: 5px;
+    right: 75px;
+  }
+
+  .removeMail {
+    overflow: unset !important;
+    top: 38px;
+    right: 0px;
+    font-size: 11px;
+  }
+}
+
+.gridOnmail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 750px) {
+  .gridOnmail {
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  .mbHide {
+    display: none;
+  }
+}
+
+.mailContent {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+.closeEmail {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  padding: 5px;
+  color: white;
+}
+
+.mailcontenInfo {
+  border-top: 1px solid #eee;
+}
+
+.mailHeader {
+  font-size: 14px;
+}
+
+.mailHeader span {
+  font-weight: 600;
+}
